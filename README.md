@@ -139,4 +139,3 @@ Karabiner-Elements automatically reloads the config when the file changes (no re
 - **ZSA Voyager hyper not working?** Ensure the Voyager's firmware hyper sends all four modifiers (`Cmd + Ctrl + Opt + Shift`).
   <<<<<<< HEAD
 - # **Built-in keyboard not working?** This config uses `device_unless` to exclude the ZSA Voyager. If your built-in keyboard still doesn't work, check its vendor ID in Karabiner-Elements → Devices.
-  > > > > > > > 2b0152131204a6f7f2b1f083834fea476d8558bf
