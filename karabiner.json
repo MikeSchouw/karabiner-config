@@ -45,6 +45,11 @@
                       {
                         "vendor_id": 1452,
                         "is_keyboard": true
+                      },
+                      {
+                        "vendor_id": 1452,
+                        "product_id": 591,
+                        "is_keyboard": true
                       }
                     ]
                   }
@@ -60,7 +65,12 @@
                 "from": {
                   "key_code": "s",
                   "modifiers": {
-                    "mandatory": ["left_command", "left_control", "left_option", "left_shift"]
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
                   }
                 },
                 "to": [
@@ -74,7 +84,12 @@
                 "from": {
                   "key_code": "c",
                   "modifiers": {
-                    "mandatory": ["left_command", "left_control", "left_option", "left_shift"]
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
                   }
                 },
                 "to": [
@@ -88,12 +103,17 @@
                 "from": {
                   "key_code": "b",
                   "modifiers": {
-                    "mandatory": ["left_command", "left_control", "left_option", "left_shift"]
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
                   }
                 },
                 "to": [
                   {
-                    "shell_command": "open -a 'Safari'"
+                    "shell_command": "open -a 'Zen'"
                   }
                 ]
               },
@@ -102,7 +122,12 @@
                 "from": {
                   "key_code": "t",
                   "modifiers": {
-                    "mandatory": ["left_command", "left_control", "left_option", "left_shift"]
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
                   }
                 },
                 "to": [
@@ -116,7 +141,12 @@
                 "from": {
                   "key_code": "f",
                   "modifiers": {
-                    "mandatory": ["left_command", "left_control", "left_option", "left_shift"]
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
                   }
                 },
                 "to": [
