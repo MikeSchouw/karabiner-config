@@ -4,31 +4,24 @@ Ergonomics-focused Karabiner-Elements configuration to reduce left thumb strain 
 
 ## Overview
 
-<<<<<<< HEAD
-
 - **Right Command** on all keyboards (except ZSA Voyager) is mapped to a **Hyper key** (`Cmd + Ctrl + Opt + Shift`)
 - **Hyper + Letter** combinations switch to or open apps
 - **Hyper + Letter** when app is already focused cycles through that app's windows (replaces painful `Cmd + \``)
-- # Works alongside the ZSA Voyager split keyboard (hyper already configured in firmware, so Right Command is left untouched)
-- **Right Command** on Apple keyboards (MacBook internal & external Touch ID keyboard) is mapped to a **Hyper key** (`Cmd + Ctrl + Opt + Shift`)
-- **Hyper + Letter** combinations switch to or open apps
-- Works alongside the ZSA Voyager split keyboard (hyper already configured in firmware)
-  > > > > > > > 2b0152131204a6f7f2b1f083834fea476d8558bf
+- Works alongside the ZSA Voyager split keyboard (hyper already configured in firmware, so Right Command is left untouched)
 - Version controlled in Git for easy sync across work laptops
 
 ## Hyper Key Mappings
 
 | Shortcut | Action |
 | -------- | ------ |
-
-<<<<<<< HEAD
 | `Hyper + S` | Open / Switch to **Slack** (cycle windows if already focused) |
 | `Hyper + C` | Open / Switch to **Visual Studio Code** (cycle windows if already focused) |
-| `Hyper + B` | Open / Switch to **Browser** (Safari) (cycle windows if already focused) |
-| `Hyper + T` | Open / Switch to **Terminal** (cycle windows if already focused) |
+| `Hyper + B` | Open / Switch to **Browser** (Zen) (cycle windows if already focused) |
+| `Hyper + T` | Open / Switch to **Terminal** (Ghostty) (cycle windows if already focused) |
+| `Hyper + N` | Open / Switch to **Obsidian** (cycle windows if already focused) |
 | `Hyper + F` | Open / Switch to **Finder** (cycle windows if already focused) |
 
-> **Note:** Edit `karabiner.json` to change the browser or add more app shortcuts.
+> **Note:** Edit `karabiner.json` to change apps or add more shortcuts.
 
 ## Window Cycling
 
@@ -39,17 +32,6 @@ For example:
 1. `Hyper + C` → brings VS Code to the front
 2. `Hyper + C` again (while VS Code is focused) → cycles to the next VS Code window
 3. Keep pressing `Hyper + C` to keep cycling through all VS Code windows
-
-=======
-| `Hyper + S` | Open / Switch to **Slack** |
-| `Hyper + C` | Open / Switch to **Visual Studio Code** |
-| `Hyper + B` | Open / Switch to **Browser** (Safari) |
-| `Hyper + T` | Open / Switch to **Terminal** |
-| `Hyper + F` | Open / Switch to **Finder** |
-
-> **Note:** Edit `karabiner.json` to change the browser or add more app shortcuts.
-
-> > > > > > > 2b0152131204a6f7f2b1f083834fea476d8558bf
 
 ## Prerequisites
 
@@ -97,14 +79,24 @@ cd ~/karabiner-config
 
 ## Customization
 
-### Change the Browser
+### Change an App
 
-Edit `karabiner.json` and replace `'Safari'` with your preferred browser, and update the bundle identifier in both `frontmost_application_if` and `frontmost_application_unless` conditions:
+Edit `karabiner.json` and replace the app name, then update the bundle identifier in both `frontmost_application_if` and `frontmost_application_unless` conditions. Find bundle IDs with:
 
-- Chrome: bundle ID `com.google.Chrome`, app name `'Google Chrome'`
-- Firefox: bundle ID `org.mozilla.firefox`, app name `'Firefox'`
-- Arc: bundle ID `company.thebrowser.Browser`, app name `'Arc'`
-- Brave: bundle ID `com.brave.Browser`, app name `'Brave Browser'`
+```bash
+osascript -e 'id of app "App Name"'
+```
+
+Common bundle IDs:
+
+- Chrome: `com.google.Chrome`
+- Firefox: `org.mozilla.firefox`
+- Arc: `company.thebrowser.Browser`
+- Brave: `com.brave.Browser`
+- Safari: `com.apple.Safari`
+- Obsidian: `md.obsidian`
+- Terminal: `com.apple.Terminal`
+- Ghostty: `com.mitchellh.ghostty`
 
 ### Add More App Shortcuts
 
@@ -112,7 +104,7 @@ Copy an existing rule block in `karabiner.json` and change:
 
 - `key_code`: the letter key
 - `shell_command`: the `open -a 'App Name'` command
-- `bundle_identifiers`: the app's bundle ID (find with `osascript -e 'id of app "App Name"'`)
+- `bundle_identifiers`: the app's bundle ID
 
 ### Exclude Additional Keyboards
 
@@ -137,5 +129,4 @@ Karabiner-Elements automatically reloads the config when the file changes (no re
 - **App not opening?** Verify the exact app name with `ls /Applications`.
 - **Right Command still acting as Command?** Check that the correct profile is selected in Karabiner-Elements settings.
 - **ZSA Voyager hyper not working?** Ensure the Voyager's firmware hyper sends all four modifiers (`Cmd + Ctrl + Opt + Shift`).
-  <<<<<<< HEAD
-- # **Built-in keyboard not working?** This config uses `device_unless` to exclude the ZSA Voyager. If your built-in keyboard still doesn't work, check its vendor ID in Karabiner-Elements → Devices.
+- **Built-in keyboard not working?** This config uses `device_unless` to exclude the ZSA Voyager. If your built-in keyboard still doesn't work, check its vendor ID in Karabiner-Elements → Devices.
